@@ -30,9 +30,9 @@ module MIPS_datapath(clk, rst, in_port, out_port, instruction, InsRead, PCnext, 
 
 //----------------------programme counter---------------------------//
     assign pc_incr = pc + 2;
-    assign sign_extend = {{(BUS_WIDTH - REGFILEA_ADDR_SIZE){1'b0}}, instruction[5:0]};
+    assign sign_extend = {{(BUS_WIDTH - REGFILEA_ADDR_SIZE){instruction[5]}}, instruction[5:0]};
     assign sign_extend_shifted = sign_extend << 1;
-    assign pc_adder = pc_incr + sign_extend_shifted;
+    assign pc_adder = pc + sign_extend_shifted;
 
     assign jump_addr = {pc[15:13], instruction[11:0], 1'b0};
 

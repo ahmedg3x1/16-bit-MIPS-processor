@@ -64,22 +64,6 @@ module MIPS_control(clk, rst, MemWrite, MemRead, zero_flag, instruction, InsRead
             LW_addr: ns = Lw_data;
             HLT:     ns = HLT;
             default: ns = Fetch;
-            /*
-            ALU:     ns = Fetch;
-            ADDI:    ns = Fetch;
-            ANDI:    ns = Fetch;
-            ORI:     ns = Fetch;
-            Lw_data: ns = Fetch;
-            SW:      ns = Fetch;
-            JUMP:    ns = Fetch;
-            JUMPAL:  ns = Fetch;
-            JUMPR:   ns = Fetch;
-            BEQ:     ns = Fetch;
-            BNE:     ns = Fetch;
-            IN:      ns = Fetch;
-            OUT:     ns = Fetch;
-            NOP:     ns = Fetch;
-            */
         endcase
     end
 

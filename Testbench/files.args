@@ -1,0 +1,8 @@
+../RTL/register_file.v
+../RTL/ALSU.v
+../RTL/MIPS_control.v
+../RTL/ALU_control.v
+../RTL/data_memory.v
+../RTL/instruction_memory.v 
+../RTL/MIPS_datapath.v
+../RTL/MIPS_top.v 
